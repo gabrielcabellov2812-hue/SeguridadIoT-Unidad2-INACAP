@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECEFF1"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvHeaderOperator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Operador: admin | Canal Cifrado AES-128 Activo"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#1A237E"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1. Conexión Inalámbrica Wi-Fi (P2P Socket TCP)"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#0D47A1" />
+
+                <TextView
+                    android:id="@+id/tvLocalIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mi IP Local: Obteniendo... (Puerto: 8888)"
+                    android:textSize="13sp"
+                    android:textColor="#37474F"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="8dp" />
+
+                <EditText
+                    android:id="@+id/etTargetIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="IP del otro dispositivo Android (ej. 192.168.1.50)"
+                    android:inputType="text"
+                    android:minHeight="48dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStartServer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Iniciar Receptor"
+                        android:layout_marginEnd="6dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPingTest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Probar Enlace"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvConnectionStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estado de Red: Esperando configuración..."
+                    android:textSize="12sp"
+                    android:textColor="#00695C"
+                    android:layout_marginTop="6dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2. Panel de MONITOREO (Datos Recibidos)"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#1B5E20" />
+
+                <TextView
+                    android:id="@+id/tvMonitorAlertState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ESTADO NODO PATIO: SIN MOVIMIENTO"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:background="#E8F5E9"
+                    android:textColor="#2E7D32"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:id="@+id/tvMonitorDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Luz Habitación: APAGADA | Duración: 5 seg\nModo OT Activo: Disuasión Automática"
+                    android:textSize="13sp"
+                    android:textColor="#263238"
+                    android:layout_marginTop="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bitácora de Auditoría OT / Paquetes Recibidos:"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/tvMonitorLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:background="#263238"
+                    android:textColor="#80CBC4"
+                    android:padding="8dp"
+                    android:textSize="11sp"
+                    android:scrollbars="vertical"
+                    android:text="[Sistema iniciado - Escuchando tramas AES-128...]" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3. Panel ACTIVADOR (Control Remoto IoT)"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:textColor="#B71C1C" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swPirTrigger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Activar Alerta Movimiento (Sensor PIR Patio)"
+                    android:layout_marginTop="8dp" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/swLightActuator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Encender Luz Disuasiva (Nodo Habitación)" />
+
+                <TextView
+                    android:id="@+id/tvSliderLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tiempo de Retardo / Intensidad Actuador: 5 seg"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/sliderDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="1.0"
+                    android:valueTo="30.0"
+                    android:stepSize="1.0"
+                    android:value="5.0" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Modo de Operación del Sistema:"
+                    android:textStyle="bold"
+                    android:layout_marginTop="6dp" />
+
+                <RadioGroup
+                    android:id="@+id/rgOperationMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:id="@+id/rbAutoDeterrence"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Modo Disuasión Automática (PIR + Luz)"
+                        android:checked="true" />
+
+                    <RadioButton
+                        android:id="@+id/rbNightWatch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Modo Vigilancia Nocturna Crítica" />
+
+                    <RadioButton
+                        android:id="@+id/rbSilentMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Modo Silencioso (Solo Registro en Monitor)" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/etCustomCommand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Mensaje o comando adicional (ej. Revisar sector norte)"
+                    android:minHeight="48dp"
+                    android:layout_marginTop="6dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSendCommand"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:text="ENVIAR ESTADO AL DISPOSITIVO REMOTO"
+                    android:backgroundTint="#C62828"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
